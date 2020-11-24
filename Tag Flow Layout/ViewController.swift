@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
    
     let TAGS = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
+    
+    var letters: [String: String] = [:]
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,6 +22,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        letters["a"] = "Apple"
+        letters["a"] = "Boy"
         
         let cellNib = UINib(nibName: "TagCell", bundle: nil)
         self.collectionView.register(cellNib, forCellWithReuseIdentifier: "TagCell")
